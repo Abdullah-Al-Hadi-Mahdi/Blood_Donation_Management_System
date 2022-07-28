@@ -4,7 +4,7 @@
 --
 -- Host: 127.0.0.1
 -- Generation Time: Jul 22, 2022 at 01:39 PM
--- Server version: 10.4.22-MariaDB
+-- 
 -- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -12,12 +12,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
---
 -- Database: `bloodbankdb`
 --
 
@@ -38,7 +33,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(2, 'joy', 'joy');
+
 
 -- --------------------------------------------------------
 
@@ -62,7 +57,6 @@ CREATE TABLE `blood_donation` (
 --
 
 INSERT INTO `blood_donation` (`donation_id`, `donor_id`, `unit`, `request_date`, `diseases`, `status`, `action`, `admin_id`) VALUES
-('62da8292bb550', '999', '3', '2022/07/22 12:57:22', 'fever', 'pending', 'none', '1');
 
 -- --------------------------------------------------------
 
@@ -87,9 +81,7 @@ CREATE TABLE `blood_request` (
 --
 
 INSERT INTO `blood_request` (`request_id`, `requester_id`, `unit`,`blood_group`, `request_date`, `reasons`, `status`, `action`, `admin_id`) VALUES
-('62da82a213117', '999', '1', '2022/07/22 12:57:38', 'cold', 'rejected', 'Stock Low', '1'),
-('62da82c735a2d', '999', '3', '2022/07/22 12:58:15', 'cold', 'rejected', 'Stock Low', '1'),
-('62da8be3a5e9a', 'joy', '2', '2022/07/22 01:37:07', 'fever', 'approved', 'removed 2 units', '2');
+
 
 -- --------------------------------------------------------
 
@@ -108,14 +100,7 @@ CREATE TABLE `blood_stock` (
 --
 
 INSERT INTO `blood_stock` (`blood_type`, `unit`, `admin_id`) VALUES
-('A+', '3', '2'),
-('A-', '0', '1'),
-('AB+', '0', '1'),
-('AB-', '0', '1'),
-('B+', '0', '1'),
-('B-', '0', '1'),
-('O+', '0', '1'),
-('O-', '0', '1');
+
 
 -- --------------------------------------------------------
 
@@ -139,8 +124,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userid`, `first_name`, `last_name`, `phone_number`, `gender`, `blood_type`, `password`, `age`) VALUES
-('joy', 'web developer', 'joy', '01971779608', 'm', 'A+', '$2y$10$Wl4p5VjWRLaGtZr7.Jt28udBuiL9D6iEQtP4dNWXrMEZ.zmTSlL7m', '20'),
-('999', 'Sree Biddut', 'shil', '01971779608', 'f', 'AB+', '$2y$10$UnQ8sdVS7VjQN7xcycu2euY5q7l.P6vLi9D.Tm.G/VC/Nft4HvAXG', '25');
+
 
 -- --------------------------------------------------------
 
@@ -190,6 +174,4 @@ ALTER TABLE `users`
   MODIFY `S.no` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
